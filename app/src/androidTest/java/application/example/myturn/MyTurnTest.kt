@@ -47,7 +47,7 @@ class MyTurnTest {
     }
 
     /*
-    * Check if hints in login page are corrent
+    * Check if hints in login page are correct
     * */
     @Test fun hintTest(){
         onView(withId(R.id.username)).check(ViewAssertions.matches(withHint(R.string.password_hint)))
@@ -55,7 +55,7 @@ class MyTurnTest {
     }
 
     /*
-    * Check if every turn is displayed in order
+    * Check if elements on login page are in the corrent place
     * */
     @Test fun rightPlaceElementsTest(){
         onView(withId(R.id.username)).check(isCompletelyAbove(withId(R.id.password)))
@@ -64,7 +64,7 @@ class MyTurnTest {
     }
 
     /*
-    * Check if every turn is displayed in order
+    * Check successfully authentication
     * */
     @Test
     fun authTest(){
@@ -76,7 +76,7 @@ class MyTurnTest {
     }
 
     /*
-    * Check if every turn is displayed in order
+    * Check if not successfully authentication shows toast message
     * */
     @Test
     fun failedAuthTest(){
@@ -152,6 +152,9 @@ class MyTurnTest {
             )
     }
 
+    /*
+    *   Check change of a turn
+     */
     @Test
     fun changeTest(){
         authTest()
@@ -185,7 +188,10 @@ class MyTurnTest {
             )
         Thread.sleep(2000)
     }
-
+    /*
+    * Check if a turn is successfully taken
+    *
+    */
     @Test
     fun takeTest(){
         changeTest()
@@ -212,6 +218,10 @@ class MyTurnTest {
         Thread.sleep(2000)
     }
 
+    /*
+    *Check if failed change of the turn shows toast message
+    *
+     */
     @Test
     fun failedChangeTest(){
         changeTest()
@@ -234,6 +244,11 @@ class MyTurnTest {
 
     }
 
+
+    /*
+    *Check if failed take of the turn shows toast message
+    *
+     */
     @Test
     fun failedTakeTest(){
         takeTest()
