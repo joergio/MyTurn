@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyTurn</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_activity_try">TryActivity</string>
+    <string name="title_activity_detail_turn">DetailTurnActivity</string>
+    <string name="password_hint">Enter a password</string>
+    <string name="failed">Authentication failed</string>
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".DetailTurnActivity"
+        tools:showIn="@layout/activity_detail_turn">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+    <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/arimo"
+            android:text="Description"
+            android:textColor="#1E88E5"
+            android:textSize="30sp" />
+
+    <TextView
+            android:id="@+id/mailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="#1E88E5"
+            android:textSize="30sp"
+            tools:text="Assigned to nobody" />
+
+    <TextView
+            android:id="@+id/timeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/arimo"
+            android:text="Time"
+            android:textColor="#1E88E5"
+            android:textSize="30sp" />
+
+    <Button
+            android:id="@+id/changeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeTurn"
+            android:text="Change my turn, please!" />
+
+    <Button
+            android:id="@+id/takeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="takeTurn"
+            android:text="Take this turn!" />
+
+</LinearLayout>
